@@ -6,12 +6,12 @@ public class Main {
         Random random = new Random();
         Cliente[] clientes = new Cliente[5];
 
-        // Crear 5 clientes
+        //Creamos 5 clientes
         for (int i = 0; i < 5; i++) {
             clientes[i] = new Cliente("Cliente " + (i + 1), random.nextInt(5) + 1);
         }
 
-        // Procesar cada cliente asignándolo a una caja
+        //Asignamos a cada cliente a cada uno de nuestros hilos/cajas
         for (Cliente cliente : clientes) {
             if (random.nextBoolean()) {
                 new Thread(new CajaRunnable(1, cliente)).start();

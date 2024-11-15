@@ -12,6 +12,9 @@ class Caja implements Runnable {
         this.cliente = cliente;
     }
 
+    //Este metodo de abajo es una implementación de run(), es decir, el cuerpo principal de nuestros hilos. Nos desglosará por pantalla el proceso de las cajas, añadiendo una espera
+    //simulada para darle realismo
+
     @Override
     public void run() {
         if (cliente == null) {
